@@ -1,0 +1,11 @@
+C:\Users\guisa\Documents\workspace\loja-virtual-server\src\main\java\br\com\lojavirtual\model\Product.java
+C:\Users\guisa\Documents\workspace\loja-virtual-server\src\main\java\br\com\lojavirtual\repository\ProductRepository.java
+C:\Users\guisa\Documents\workspace\loja-virtual-server\src\main\java\br\com\lojavirtual\controller\ProductController.java
+C:\Users\guisa\Documents\workspace\loja-virtual-server\src\main\java\br\com\lojavirtual\controller\SalesController.java
+C:\Users\guisa\Documents\workspace\loja-virtual-server\src\main\java\br\com\lojavirtual\model\Sales.java
+C:\Users\guisa\Documents\workspace\loja-virtual-server\src\main\java\br\com\lojavirtual\repository\SalesRepository.java
+C:\Users\guisa\Documents\workspace\loja-virtual-server\src\main\java\br\com\lojavirtual\service\ProductService.java
+C:\Users\guisa\Documents\workspace\loja-virtual-server\src\main\java\br\com\lojavirtual\service\SalesService.java
+C:\Users\guisa\Documents\workspace\loja-virtual-server\src\main\java\br\com\lojavirtual\listener\SalesMessageListener.java
+C:\Users\guisa\Documents\workspace\loja-virtual-server\src\main\java\br\com\lojavirtual\LojaVirtualServerApplication.java
+C:\Users\guisa\Documents\workspace\loja-virtual-server\src\main\java\br\com\lojavirtual\config\RabbitConfig.java

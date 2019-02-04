@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+	  
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Desafio Desenvolvedor</title>
+
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0/css/bootstrap.min.css}"/>
+    <style>
+        body {
+            padding-top: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container">
+        <a class="navbar-brand" href="#" th:href="@{/home}">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#" th:href="@{/pedidos}">Meus Pedidos</a>
+        </div>
+    </nav>
+
+      <div class="container" th:if="${orders == false}">
+          <h2>Carrinho de Compras</h2>
+          <br>
+          <div class="alert alert-success" role="alert" th:if="${ message != null}" th:text="${message}"></div>
+          <div class="alert alert-danger" role="alert" th:if="${ erro != null}" th:text="${erro}"></div>
+          <div th:if="${ message == null}">
+              <form th:action="@{/sendMsg}" method="post">
+              	  <input type="hidden" id="id" name="id" th:value="${product.id}" />
+                  <div class="form-group">
+                      <label for="nomeProduto">Nome do Produto:</label>
+                      <input class="form-control" id="name" name="name" th:readonly="true" th:value="${product.name}"/>
+                  </div>
+                  <div class="form-group">
+                      <label for="preco">Preço:</label>
+                      <input type="number" class="form-control" id="price" name="price" th:readonly="true" th:value="${product.price}"/>
+                  </div>
+                  <div class="form-group">
+                      <label for="estoque">Estoque:</label>
+                      <input type="number" class="form-control" id="stock" name="stock" th:readonly="true" th:value="${product.stock}"/>
+                  </div>
+                  <div class="form-group">
+                      <label for="quantidade">Quantidade:</label>
+                      <input type="number" min="1" max="10" class="form-control" id="amount" name="amount" th:value="${product.amount}"/>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Comprar</button>
+              </form>
+          </div>
+      </div>
+      
+      <div class="container" th:if="${orders == true}">
+      	<form th:action="@{/searchOrder}" method="post">
+			<div class="form-group">
+				<label for="buscarPedido">Buscar Pedido:</label> 
+				<input type="number" class="form-control" id="orderId" name="orderId" />
+			</div>
+			<button type="submit" class="btn btn-primary">Buscar</button>
+		</form>
+		<br>
+		<div class="alert alert-danger" role="alert" th:if="${orderList == null || orderList.empty}">
+			Nenhum pedido foi encontrado.
+		</div>
+		<div>
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th>#</th>
+						<th scope="col" align="center">Id da transação</th>
+						<th scope="col" align="center">Data da Compra</th>
+						<th scope="col" align="center">Quantidade</th>
+						<th scope="col" align="center">Mensagem</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="order : ${orderList}">
+						<th scope="row" th:text="${ order.id}"></th>
+						<td th:text="${ order.idTransaction}"></td>
+						<td th:text="${#dates.format(order.idTransaction, 'dd/MM/yyyy HH:mm')}" align="center"></td>
+						<td th:text="${ order.amount}" align="center"></td>
+						<td th:if="${ order.error != null}" th:text="${ order.error}"></td>
+						<td th:if="${ order.success != null}" th:text="${ order.success}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+      
+    <script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/1.11.1/dist/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.0.0/js/bootstrap.min.js}"></script>
+
+</body>
+</html>

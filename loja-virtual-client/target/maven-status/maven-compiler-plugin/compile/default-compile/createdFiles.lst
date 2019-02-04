@@ -1,0 +1,9 @@
+br\com\lojavirtual\LojaVirtualClientApplication.class
+br\com\lojavirtual\controller\ViewController.class
+br\com\lojavirtual\util\Transaction.class
+br\com\lojavirtual\model\Product.class
+br\com\lojavirtual\service\SalesService.class
+br\com\lojavirtual\service\ProductService.class
+br\com\lojavirtual\config\RabbitConfig.class
+br\com\lojavirtual\model\Form.class
+br\com\lojavirtual\model\Sales.class

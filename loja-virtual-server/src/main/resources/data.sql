@@ -1,0 +1,1 @@
+insert into product (id, name, price, stock) values (1, 'TV SAMSUNG SMART 41 POLEGADAS', 1200.00, 500)

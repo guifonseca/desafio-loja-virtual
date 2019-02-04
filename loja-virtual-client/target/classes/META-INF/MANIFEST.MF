@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: loja-virtual-client
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: guisa
+Implementation-Vendor-Id: br.com.lojavirtual
+Build-Jdk: 1.8.0_181
+Implementation-URL: http://projects.spring.io/spring-boot/spring-boot-
+ starter-parent/loja-virtual-client/
+Created-By: Maven Integration for Eclipse
+

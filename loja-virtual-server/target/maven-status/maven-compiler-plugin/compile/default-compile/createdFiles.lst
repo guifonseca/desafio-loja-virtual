@@ -1,0 +1,11 @@
+br\com\lojavirtual\controller\SalesController.class
+br\com\lojavirtual\repository\ProductRepository.class
+br\com\lojavirtual\service\SalesService.class
+br\com\lojavirtual\service\ProductService.class
+br\com\lojavirtual\repository\SalesRepository.class
+br\com\lojavirtual\listener\SalesMessageListener.class
+br\com\lojavirtual\controller\ProductController.class
+br\com\lojavirtual\model\Product.class
+br\com\lojavirtual\LojaVirtualServerApplication.class
+br\com\lojavirtual\config\RabbitConfig.class
+br\com\lojavirtual\model\Sales.class
