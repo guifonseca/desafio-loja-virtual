@@ -15,4 +15,6 @@ Obs.:
 - Url loja-virtual-server: http://localhost:8080/ + Path do serviço rest
 - Existe um script (data.sql) de bd que é executado na inicialização e alimenta a base de produto toda vez que a loja-virtual-server é iniciado.
 - Para que a home do client seja aberta, o server deverá estar sendo executado.
+- Para execução da aplicação cliente: Pode ser feita importando o projeto no eclipse e executando a classe LojaVirtualClientApplication.java ou executando o jar na pasta target via cmd.
+- Para execução da aplicação servidor: Pode ser feita importando o projeto no eclipse e executando a classe LojaVirtualServerApplication.java ou executando o jar na pasta target via cmd.
 
